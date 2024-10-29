@@ -3,6 +3,8 @@ plugins {
     alias(libs.plugins.kotlin.android)
     id("maven-publish")
 }
+group = "com.github.jitpack"
+version = "1.0"
 
 android {
     namespace = "com.mid.versatilemediapicker"

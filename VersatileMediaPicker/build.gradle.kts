@@ -46,7 +46,7 @@ dependencies {
 
     implementation(libs.kotlin.stdlib)
 }
-publishing {
+/*publishing {
     publications {
         create<MavenPublication>("release") {
             afterEvaluate {
@@ -55,6 +55,19 @@ publishing {
             groupId = "com.github.babar-cmd"
             artifactId = "VersatileMediaPicker"
             version = "1.0.0"
+        }
+    }
+}*/
+publishing {
+    publications {
+        register<MavenPublication>("release") {
+            groupId = "com.github.babar-cmd"
+            artifactId = "VersatileMediaPicker"
+            version = "1.0.0"
+
+            afterEvaluate {
+                from(components["release"])
+            }
         }
     }
 }

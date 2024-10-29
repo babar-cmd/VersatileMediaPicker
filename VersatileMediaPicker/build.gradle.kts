@@ -58,6 +58,7 @@ dependencies {
         }
     }
 }*/
+
 publishing {
     publications {
         register<MavenPublication>("release") {
@@ -71,3 +72,8 @@ publishing {
         }
     }
 }
+
+
+
+
+
